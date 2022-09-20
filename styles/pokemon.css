@@ -70,7 +70,7 @@ main {
 .pokemon-section {
     grid-area: pokemon;
     justify-self: center;
-    align-content: center;
+    align-items: start;
     padding-top: 10px;
     display: grid;
     grid-template-rows: auto auto auto;
