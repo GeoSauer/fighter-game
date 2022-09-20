@@ -20,15 +20,58 @@
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/global.css" />
         <!-- add link for page specific css -->
+        <link rel="stylesheet" href="styles/pokemon.css" />
     </head>
 
     <body>
         <header>
-            <img class="logo" src="assets/html_css_js.png" alt="logo" />
-            <h1>Web App</h1>
+            <img class="logo" src="assets/pokeball2.png" alt="logo" />
+            <h1>Catch 'em All or Die Trying</h1>
+            <img class="logo" src="assets/pokeball2.png" alt="logo" />
         </header>
 
-        <main></main>
+        <main>
+            <section class="banner" id="scoreboard">You don't have any Pokemon :(</section>
+
+            <section class="banner" id="result-display">
+                Click on a Pokemon to get catchin'!
+            </section>
+
+            <section class="trainer avatar">
+                <p id="trainer-hp" class="stat">20</p>
+                <img id="trainer-image" src="assets/trainer.png" alt="trainer" />
+            </section>
+
+            <section class="pokemon-section">
+                <form id="add-pokemon-form">
+                    <label>
+                        <div>Who's that Pokemon?</div>
+                        <div class="controls">
+                            <input name="name" required />
+                            <button><img src="/assets/pokeballs.png" alt="pokeball" /></button>
+                        </div>
+                    </label>
+                </form>
+                <ul id="pokemon-list">
+                    <li class="pokemon card">
+                        <span class="stat">5</span>
+                        <img src="/assets/bellsprout.png" alt="bellsprout" />
+                        <span class="name">Bellsprout</span>
+                    </li>
+                    <li class="pokemon card">
+                        <span class="stat">4</span>
+                        <img src="/assets/caterpie.png" alt="caterpie" />
+                        <span class="name">Caterpie</span>
+                    </li>
+                    <li class="pokemon card">
+                        <span class="stat">3</span>
+                        <img src="/assets/eevee.png" alt="eevee" />
+                        <span class="name">Eevee</span>
+                    </li>
+                </ul>
+                <button id="remove-button">Collect captured Pokemon</button>
+            </section>
+        </main>
 
         <footer>
             Pokemon icons from <a target="_blank" href="https://icons8.com">Icons8</a> and
