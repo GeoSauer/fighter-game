@@ -4,6 +4,7 @@
 const trainerHp = document.getElementById('trainer-hp');
 const trainerImage = document.getElementById('trainer-image');
 const resultDisplay = document.getElementById('result-display');
+const scoreboard = document.getElementById('scoreboard');
 
 /* State */
 let trainer = {
@@ -12,6 +13,7 @@ let trainer = {
 };
 
 let result = 'You caught somethin!';
+let captured = '1';
 
 /* Events */
 
@@ -28,6 +30,12 @@ function displayTrainer() {
 function displayResult() {
     resultDisplay.textContent = result;
 }
+
+function displayScoreboard() {
+    scoreboard.textContent = `You have captured ${captured} Pokemon!`;
+}
+
 // (don't forget to call any display functions you want to run on page load!)
 displayTrainer();
 displayResult();
+displayScoreboard();
