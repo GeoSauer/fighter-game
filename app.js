@@ -37,90 +37,90 @@ let pokemons = [
 ];
 
 // pokemon types
-const bellsprout = {
-    type: 'bellsprout',
-    hp: 2,
-};
+// const bellsprout = {
+//     type: 'bellsprout',
+//     hp: 2,
+// };
 
-const caterpie = {
-    type: 'caterpie',
-    hp: 2,
-};
+// const caterpie = {
+//     type: 'caterpie',
+//     hp: 2,
+// };
 
-const eevee = {
-    type: 'eevee',
-    hp: 3,
-};
+// const eevee = {
+//     type: 'eevee',
+//     hp: 3,
+// };
 
-const mankey = {
-    type: 'mankey',
-    hp: 6,
-};
+// const mankey = {
+//     type: 'mankey',
+//     hp: 6,
+// };
 
-const meowth = {
-    type: 'meowth',
-    hp: 3,
-};
+// const meowth = {
+//     type: 'meowth',
+//     hp: 3,
+// };
 
-const pidgey = {
-    type: 'pidgey',
-    hp: 3,
-};
+// const pidgey = {
+//     type: 'pidgey',
+//     hp: 3,
+// };
 
-const rattata = {
-    type: 'rattata',
-    hp: 2,
-};
+// const rattata = {
+//     type: 'rattata',
+//     hp: 2,
+// };
 
-const squirtle = {
-    type: 'squirtle',
-    hp: 4,
-};
+// const squirtle = {
+//     type: 'squirtle',
+//     hp: 4,
+// };
 
-const venonat = {
-    type: 'venonat',
-    hp: 4,
-};
+// const venonat = {
+//     type: 'venonat',
+//     hp: 4,
+// };
 
-const zubat = {
-    type: 'zubat',
-    hp: 2,
-};
+// const zubat = {
+//     type: 'zubat',
+//     hp: 2,
+// };
 
 const trainerAttacks = [0, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5];
 const pokemonAttacks = [0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4];
-const pokemonTypes = [
-    bellsprout,
-    bellsprout,
-    bellsprout,
-    bellsprout,
-    caterpie,
-    caterpie,
-    caterpie,
-    caterpie,
-    rattata,
-    rattata,
-    rattata,
-    rattata,
-    zubat,
-    zubat,
-    zubat,
-    zubat,
-    eevee,
-    eevee,
-    eevee,
-    meowth,
-    meowth,
-    meowth,
-    pidgey,
-    pidgey,
-    pidgey,
-    squirtle,
-    squirtle,
-    venonat,
-    venonat,
-    mankey,
-];
+// const pokemonTypes = [
+//     bellsprout,
+//     bellsprout,
+//     bellsprout,
+//     bellsprout,
+//     caterpie,
+//     caterpie,
+//     caterpie,
+//     caterpie,
+//     rattata,
+//     rattata,
+//     rattata,
+//     rattata,
+//     zubat,
+//     zubat,
+//     zubat,
+//     zubat,
+//     eevee,
+//     eevee,
+//     eevee,
+//     meowth,
+//     meowth,
+//     meowth,
+//     pidgey,
+//     pidgey,
+//     pidgey,
+//     squirtle,
+//     squirtle,
+//     venonat,
+//     venonat,
+//     mankey,
+// // ];
 
 /* Events */
 
