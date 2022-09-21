@@ -22,3 +22,13 @@ export function renderPokemon(pokemon) {
 
     return li;
 }
+
+export function getRandomItem(array) {
+    const random = getRandomNumber(array.length);
+    const item = array[random];
+    return item;
+}
+
+export function getRandomNumber(choices) {
+    return Math.floor(Math.random() * choices);
+}

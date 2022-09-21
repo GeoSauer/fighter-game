@@ -1,5 +1,6 @@
 /* Imports */
-import { renderPokemon } from './render-utils.js';
+import { renderPokemon } from './utils.js';
+import { getRandomItem } from './utils.js';
 
 /* Get DOM Elements */
 const trainerHp = document.getElementById('trainer-hp');
@@ -15,7 +16,7 @@ let trainer = {
 };
 
 let result = '';
-let captured = '0';
+let captured = 0;
 
 let pokemons = [
     {
@@ -86,6 +87,41 @@ const zubat = {
     hp: 2,
 };
 
+const trainerAttacks = [0, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5];
+const pokemonAttacks = [0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4];
+const pokemonTypes = [
+    bellsprout,
+    bellsprout,
+    bellsprout,
+    bellsprout,
+    caterpie,
+    caterpie,
+    caterpie,
+    caterpie,
+    rattata,
+    rattata,
+    rattata,
+    rattata,
+    zubat,
+    zubat,
+    zubat,
+    zubat,
+    eevee,
+    eevee,
+    eevee,
+    meowth,
+    meowth,
+    meowth,
+    pidgey,
+    pidgey,
+    pidgey,
+    squirtle,
+    squirtle,
+    venonat,
+    venonat,
+    mankey,
+];
+
 /* Events */
 
 /* Display Functions */
@@ -112,6 +148,39 @@ function displayPokemon() {
     for (const pokemon of pokemons) {
         const pokemonEl = renderPokemon(pokemon);
         pokemonList.append(pokemonEl);
+
+        pokemonEl.addEventListener('click', () => {
+            if (pokemon.hp < 1) {
+                result = `You already caught that one!`;
+                displayResult();
+                return;
+            }
+
+            const trainerAttack = getRandomItem(trainerAttacks);
+            const pokemonAttack = getRandomItem(pokemonAttacks);
+
+            trainer.hp = Math.max(0, trainer.hp - pokemonAttack);
+            pokemon.hp = Math.max(0, pokemon.hp - trainerAttack);
+
+            result = '';
+            if (trainerAttack === 0) {
+                result += 'You whiffed it! ';
+            } else {
+                result += `You hit ${pokemon.name} and dealt ${trainerAttack} in damage! `;
+            }
+            if (pokemonAttack === 0) {
+                result += `${pokemon.name} failed to land a blow... `;
+            } else {
+                result += `${pokemon.name} landed a strike and did ${pokemonAttack} points of damage! `;
+            }
+            if (pokemon.hp < 1) {
+                captured++;
+                displayScoreboard();
+            }
+            displayResult();
+            displayTrainer();
+            displayPokemon();
+        });
     }
 }
 
