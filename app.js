@@ -8,6 +8,7 @@ const trainerImage = document.getElementById('trainer-image');
 const resultDisplay = document.getElementById('result-display');
 const scoreboard = document.getElementById('scoreboard');
 const pokemonList = document.getElementById('pokemon-list');
+const addPokemonForm = document.getElementById('add-pokemon-form');
 
 /* State */
 let trainer = {
@@ -22,107 +23,126 @@ let pokemons = [
     {
         name: 'Bellyboi',
         type: 'bellsprout',
-        hp: 2,
+        hp: 4,
     },
     {
         name: 'Wigglyfellow',
         type: 'caterpie',
-        hp: 2,
+        hp: 4,
     },
     {
         name: 'Weird Dog',
         type: 'eevee',
-        hp: 3,
+        hp: 6,
     },
 ];
 
 // pokemon types
-// const bellsprout = {
-//     type: 'bellsprout',
-//     hp: 2,
-// };
+const Bellsprout = {
+    type: 'bellsprout',
+    hp: 4,
+};
 
-// const caterpie = {
-//     type: 'caterpie',
-//     hp: 2,
-// };
+const Caterpie = {
+    type: 'caterpie',
+    hp: 4,
+};
 
-// const eevee = {
-//     type: 'eevee',
-//     hp: 3,
-// };
+const Eevee = {
+    type: 'eevee',
+    hp: 6,
+};
 
-// const mankey = {
-//     type: 'mankey',
-//     hp: 6,
-// };
+const Mankey = {
+    type: 'mankey',
+    hp: 12,
+};
 
-// const meowth = {
-//     type: 'meowth',
-//     hp: 3,
-// };
+const Meowth = {
+    type: 'meowth',
+    hp: 6,
+};
 
-// const pidgey = {
-//     type: 'pidgey',
-//     hp: 3,
-// };
+const Pidgey = {
+    type: 'pidgey',
+    hp: 6,
+};
 
-// const rattata = {
-//     type: 'rattata',
-//     hp: 2,
-// };
+const Rattata = {
+    type: 'rattata',
+    hp: 4,
+};
 
-// const squirtle = {
-//     type: 'squirtle',
-//     hp: 4,
-// };
+const Squirtle = {
+    type: 'squirtle',
+    hp: 8,
+};
 
-// const venonat = {
-//     type: 'venonat',
-//     hp: 4,
-// };
+const Venonat = {
+    type: 'venonat',
+    hp: 8,
+};
 
-// const zubat = {
-//     type: 'zubat',
-//     hp: 2,
-// };
+const Zubat = {
+    type: 'zubat',
+    hp: 4,
+};
 
 const trainerAttacks = [0, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5];
 const pokemonAttacks = [0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4];
-// const pokemonTypes = [
-//     bellsprout,
-//     bellsprout,
-//     bellsprout,
-//     bellsprout,
-//     caterpie,
-//     caterpie,
-//     caterpie,
-//     caterpie,
-//     rattata,
-//     rattata,
-//     rattata,
-//     rattata,
-//     zubat,
-//     zubat,
-//     zubat,
-//     zubat,
-//     eevee,
-//     eevee,
-//     eevee,
-//     meowth,
-//     meowth,
-//     meowth,
-//     pidgey,
-//     pidgey,
-//     pidgey,
-//     squirtle,
-//     squirtle,
-//     venonat,
-//     venonat,
-//     mankey,
-// // ];
+const pokemonTypes = [
+    Bellsprout,
+    Bellsprout,
+    Bellsprout,
+    Bellsprout,
+    Caterpie,
+    Caterpie,
+    Caterpie,
+    Caterpie,
+    Rattata,
+    Rattata,
+    Rattata,
+    Rattata,
+    Zubat,
+    Zubat,
+    Zubat,
+    Zubat,
+    Eevee,
+    Eevee,
+    Eevee,
+    Meowth,
+    Meowth,
+    Meowth,
+    Pidgey,
+    Pidgey,
+    Pidgey,
+    Squirtle,
+    Squirtle,
+    Venonat,
+    Venonat,
+    Mankey,
+];
 
 /* Events */
+addPokemonForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(addPokemonForm);
+    const pokemonType = getRandomItem(pokemonTypes);
+
+    const pokemon = {
+        name: formData.get('name'),
+        type: pokemonType.type,
+        hp: pokemonType.hp,
+    };
+    pokemons.push(pokemon);
+
+    result = `${pokemon.name} the ${pokemon.type} has emerged from the tall grass!`;
+
+    displayPokemon();
+    displayResult();
+
+    addPokemonForm.reset();
+});
 
 /* Display Functions */
 function displayTrainer() {
