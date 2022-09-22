@@ -9,6 +9,7 @@ const resultDisplay = document.getElementById('result-display');
 const scoreboard = document.getElementById('scoreboard');
 const pokemonList = document.getElementById('pokemon-list');
 const addPokemonForm = document.getElementById('add-pokemon-form');
+const removeButton = document.getElementById('remove-button');
 
 /* State */
 let trainer = {
@@ -89,7 +90,7 @@ const Zubat = {
 };
 
 const trainerAttacks = [0, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5];
-const pokemonAttacks = [0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4];
+const pokemonAttacks = [0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3];
 const pokemonTypes = [
     Bellsprout,
     Bellsprout,
@@ -144,6 +145,18 @@ addPokemonForm.addEventListener('submit', (e) => {
     addPokemonForm.reset();
 });
 
+removeButton.addEventListener('click', () => {
+    const alive = [];
+
+    for (const pokemon of pokemons) {
+        if (pokemon.hp > 0) {
+            alive.push(pokemon);
+        }
+    }
+    pokemons = alive;
+    displayPokemon();
+});
+
 /* Display Functions */
 function displayTrainer() {
     trainerHp.textContent = Math.max(0, trainer.hp);
@@ -186,7 +199,7 @@ function displayPokemon() {
             if (trainerAttack === 0) {
                 result += 'You whiffed it! ';
             } else {
-                result += `You hit ${pokemon.name} and dealt ${trainerAttack} in damage! `;
+                result += `You hit ${pokemon.name} and dealt ${trainerAttack} damage! `;
             }
             if (pokemonAttack === 0) {
                 result += `${pokemon.name} failed to land a blow... `;
