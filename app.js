@@ -40,52 +40,52 @@ let pokemons = [
 
 // pokemon types
 const Bellsprout = {
-    type: 'bellsprout',
+    type: 'Bellsprout',
     hp: 4,
 };
 
 const Caterpie = {
-    type: 'caterpie',
+    type: 'Caterpie',
     hp: 4,
 };
 
 const Eevee = {
-    type: 'eevee',
+    type: 'Eevee',
     hp: 6,
 };
 
 const Mankey = {
-    type: 'mankey',
+    type: 'Mankey',
     hp: 12,
 };
 
 const Meowth = {
-    type: 'meowth',
+    type: 'Meowth',
     hp: 6,
 };
 
 const Pidgey = {
-    type: 'pidgey',
+    type: 'Pidgey',
     hp: 6,
 };
 
 const Rattata = {
-    type: 'rattata',
+    type: 'Rattata',
     hp: 4,
 };
 
 const Squirtle = {
-    type: 'squirtle',
+    type: 'Squirtle',
     hp: 8,
 };
 
 const Venonat = {
-    type: 'venonat',
+    type: 'Venonat',
     hp: 8,
 };
 
 const Zubat = {
-    type: 'zubat',
+    type: 'Zubat',
     hp: 4,
 };
 
