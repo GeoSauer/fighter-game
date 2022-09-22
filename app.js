@@ -163,7 +163,7 @@ function displayTrainer() {
     if (trainer.hp < 1) {
         trainerImage.src = `assets/ambulance.png`;
     } else {
-        trainerImage.src = `assets/trainer.png`;
+        trainerImage.src = `assets/taekwondo.png`;
     }
 }
 
