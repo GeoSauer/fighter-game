@@ -188,6 +188,11 @@ function displayPokemon() {
                 displayResult();
                 return;
             }
+            if (trainer.hp < 1) {
+                result = `You can't fight that Pokemon because you fainted!`;
+                displayResult();
+                return;
+            }
 
             const trainerAttack = getRandomItem(trainerAttacks);
             const pokemonAttack = getRandomItem(pokemonAttacks);
