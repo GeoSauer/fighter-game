@@ -161,7 +161,8 @@ removeButton.addEventListener('click', () => {
 function displayTrainer() {
     trainerHp.textContent = Math.max(0, trainer.hp);
     if (trainer.hp < 1) {
-        trainerImage.src = `assets/ambulance.png`;
+        trainerImage.src = `assets/ambulance (1).png`;
+        trainerImage.classList.add('dead');
     } else {
         trainerImage.src = `assets/taekwondo.png`;
     }

@@ -3,6 +3,7 @@ header {
     align-items: center;
     justify-content: center;
     background: rgb(149, 209, 229);
+    object-fit: fill;
 }
 
 body {
@@ -28,6 +29,7 @@ main {
     font-family: shadows into light;
     font-weight: bold;
     font-size: 2em;
+    width: 95%;
 }
 
 #result-display {
@@ -38,6 +40,7 @@ main {
     font-family: shadows into light;
     font-weight: bold;
     font-size: 2em;
+    width: 95%;
 }
 
 .banner {
@@ -165,7 +168,12 @@ label {
     justify-content: center;
 }
 
-footer {
+.footer {
     font-size: 0.5em;
     text-align: right;
+}
+
+.dead {
+    height: 400px;
+    width: 400px;
 }
