@@ -4,6 +4,44 @@
 
 If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
 
+![wireframe](/assets/wireframe.png)
+
+section for scoreboard
+section for messages
+
+section for trainer
+
+*trainer health
+*trainer img
+
+section for pokemon
+
+*form to add pokemon
+*list of displayed pokemon
+
+Remove captured pokemon button
+
+Footer with attribution link
+
+State
+
+\*scoreboard
+*message
+*trainer
+\*pokemon
+
+Events
+
+*add pokemon
+*remove captured pokemon
+
+Functions
+
+*display scoreboard
+*display results
+*display trainer
+*display pokemon
+
 ## Making a plan
 
 1. **Make a drawing of your app. Simple "wireframes"**
