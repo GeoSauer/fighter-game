@@ -10,6 +10,8 @@ body {
     background-image: url('/assets/background2.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 main {
