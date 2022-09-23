@@ -13,7 +13,7 @@ const removeButton = document.getElementById('remove-button');
 
 /* State */
 let trainer = {
-    hp: 50,
+    hp: 30,
     type: 'trainer',
 };
 
@@ -190,6 +190,11 @@ function displayPokemon() {
                 return;
             }
             if (trainer.hp < 1) {
+                result = `You can't fight that Pokemon because you fainted!`;
+                displayResult();
+                return;
+            }
+            if (trainer.hp < 1 && pokemon.hp < 1) {
                 result = `You can't fight that Pokemon because you fainted!`;
                 displayResult();
                 return;
