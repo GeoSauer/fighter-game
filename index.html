@@ -1,39 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Pokemon catcher</title>
+        <link rel="icon" type="image/x-icon" href="assets/pokeball2.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+            rel="stylesheet"
+        />
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+        <link rel="stylesheet" href="styles/pokemon.css" />
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/pokeball2.png" alt="logo" />
+            <!-- <h1>Catch 'em All or Die Trying</h1> -->
+            <img src="assets/header2.png" alt="" />
+            <img class="logo" src="assets/pokeball2.png" alt="logo" />
+        </header>
 
-</head>
+        <main>
+            <section class="banner" id="scoreboard">You don't have any Pokemon :(</section>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
+            <section class="banner" id="result-display">
+                Click on a Pokemon to get catchin'!
+            </section>
 
-    <main>
+            <section class="trainer avatar">
+                <p id="trainer-hp" class="stat">20</p>
+                <img id="trainer-image" src="assets/taekwondo.png" alt="trainer" />
+            </section>
 
-    </main>
+            <section class="pokemon-section">
+                <form id="add-pokemon-form">
+                    <label>
+                        <div>Who's that Pokemon?</div>
+                        <div class="controls">
+                            <input name="name" placeholder="Name the next pokemon here" required />
+                            <button><img src="/assets/pokeballs.png" alt="pokeball" /></button>
+                        </div>
+                    </label>
+                </form>
+                <ul id="pokemon-list">
+                    <li class="pokemon card">
+                        <span class="stat">5</span>
+                        <img src="/assets/bellsprout.png" alt="bellsprout" />
+                        <span class="name">Bellsprout</span>
+                    </li>
+                    <li class="pokemon card">
+                        <span class="stat">4</span>
+                        <img src="/assets/caterpie.png" alt="caterpie" />
+                        <span class="name">Caterpie</span>
+                    </li>
+                    <li class="pokemon card">
+                        <span class="stat">3</span>
+                        <img src="/assets/eevee.png" alt="eevee" />
+                        <span class="name">Eevee</span>
+                    </li>
+                </ul>
+                <button id="remove-button">Collect captured Pokemon</button>
+            </section>
+        </main>
 
-</body>
-
+        <footer class="footer">
+            Pokemon icons from <a target="_blank" href="https://icons8.com">Icons8</a> and
+            <a href="https://www.flaticon.com/free-icons/character" title="character icons"
+                >Character icons created by Freepik - Flaticon</a
+            >
+        </footer>
+    </body>
 </html>

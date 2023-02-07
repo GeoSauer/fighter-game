@@ -1,0 +1,183 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(149, 209, 229);
+    object-fit: fill;
+}
+
+body {
+    background-image: url('/assets/background2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 60px 80px 1fr;
+    grid-template-areas:
+        'scoreboard scoreboard'
+        'result result'
+        'trainer pokemon';
+}
+
+#scoreboard {
+    grid-area: scoreboard;
+    background: rgb(77, 77, 206);
+    border-radius: 50px 50px 0px 0px;
+    border: 1px solid black;
+    font-family: shadows into light;
+    font-weight: bold;
+    font-size: 2em;
+    width: 95%;
+    margin: 15px 40px 0px 40px;
+}
+
+#result-display {
+    grid-area: result;
+    background: rgb(248, 248, 123);
+    border-radius: 0px 0px 50px 50px;
+    border: 1px solid black;
+    font-family: shadows into light;
+    font-weight: bold;
+    font-size: 2em;
+    width: 95%;
+    margin: 0px 40px 0px 40px;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trainer {
+    grid-area: trainer;
+    justify-self: center;
+    width: 275px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    padding: 15px 20px 0px 20px;
+}
+
+.avatar {
+    background: lightblue;
+    border: 3px solid silver;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    height: 95px;
+}
+
+.trainer .stat {
+    font-size: 3em;
+    margin: 0;
+    font-family: shadows into light;
+    font-weight: bold;
+}
+
+.trainer img {
+    height: 350px;
+    filter: drop-shadow(-5px 1px 9px rgb(18, 18, 18));
+}
+
+.card {
+    background: lightcoral;
+    border: 3px solid lightpink;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.pokemon-section {
+    grid-area: pokemon;
+    justify-self: center;
+    align-items: start;
+    padding-top: 10px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    font-family: shadows into light;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+input,
+button {
+    height: 30px;
+}
+
+button img {
+    height: 100%;
+}
+
+form {
+    width: 275px;
+}
+
+label {
+    display: grid;
+    gap: 2px;
+    padding: 10px;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+}
+
+#pokemon-list {
+    display: grid;
+    align-content: center;
+    gap: 10px;
+}
+
+.pokemon {
+    width: 275px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 70px 70px 1fr;
+    align-items: center;
+    justify-items: center;
+    cursor: crosshair;
+}
+
+.pokemon .stat {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pokemon img {
+    height: 60px;
+}
+
+.pokemon .name {
+    font-weight: bold;
+    text-align: center;
+}
+
+#remove-button {
+    cursor: grab;
+    font-family: shadows into light;
+    font-weight: bold;
+    font-size: 0.7em;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    font-size: 0.5em;
+    text-align: right;
+}
+
+.dead {
+    height: 400px;
+    width: 400px;
+}
